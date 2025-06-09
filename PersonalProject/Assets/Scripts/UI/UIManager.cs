@@ -1,5 +1,7 @@
-using System.Collections.Generic;
+ï»¿using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
+using UnityEngine.UI;
 
 public enum UIState
 {
@@ -7,16 +9,17 @@ public enum UIState
     mainUI,
     characterSelectUI,
     inventoryUI,
-    dungeonSelectUI
+    dungeonSelectUI,
+    dungeonUI
 }
 public class UIManager : MonoBehaviour
 {
-#region ½Ì±ÛÅæ ±¸Çö
+    #region ì‹±ê¸€í†¤ êµ¬í˜„
     private static UIManager instance = null;
 
     private void Awake()
     {
-        if(instance == null)
+        if (instance == null)
         {
             instance = this;
             DontDestroyOnLoad(this.gameObject);
@@ -38,7 +41,7 @@ public class UIManager : MonoBehaviour
             return instance;
         }
     }
-#endregion
+    #endregion
 
     public Dictionary<UIState, GameObject> UIDictionary = new Dictionary<UIState, GameObject>();
     public UIStateMachine StateMachine;
@@ -46,10 +49,25 @@ public class UIManager : MonoBehaviour
 
     private void Start()
     {
-        for(int i = 0; i < UIList.Count; i++)
+        for (int i = 0; i < UIList.Count; i++)
         {
-            UIDictionary[0] = UIList[i];
+            UIDictionary[(UIState)i] = UIList[i];
         }
         StateMachine = new UIStateMachine(UIState.firstUI);
+    }
+
+    public Button GetExitButton(GameObject go)
+    {
+        Button[] btn;
+        btn = (from comp in go.GetComponentsInChildren<Button>()
+               where comp.gameObject.tag == "ExitButton"
+               select comp).ToArray();
+
+        return btn[0];
+    }
+
+    public void GoToMainUI()
+    {
+        StateMachine.SetState(UIState.mainUI);
     }
 }
