@@ -8,7 +8,7 @@ public class FirstUI : MonoBehaviour
 
     public void Start()
     {
-        text = UIManager.Instance.UIDictionary[UIState.firstUI].GetComponentInChildren<TextMeshProUGUI>();
+        text = GetComponentInChildren<TextMeshProUGUI>();
         IEnumerator textFlicker = TextFlicker();
         StartCoroutine(textFlicker);
     }

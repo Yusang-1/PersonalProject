@@ -28,7 +28,6 @@ public class MainUI : MonoBehaviour
     {
         UIManager.Instance.StateMachine.SetState(UIState.dungeonSelectUI);
     }
-#endregion
-
+    #endregion
 
 }
