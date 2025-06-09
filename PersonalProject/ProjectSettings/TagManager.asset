@@ -6,6 +6,9 @@ TagManager:
   tags:
   - StageUI
   - ExitButton
+  - BattlePoint
+  - NextStagePoint
+  - MakeMapPoint
   layers:
   - Default
   - TransparentFX
