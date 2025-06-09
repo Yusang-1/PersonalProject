@@ -19,15 +19,18 @@ public class DungeonUI : MonoBehaviour
     [SerializeField] GameObject upgradeUI;
     RectTransform upgradeUIPosition;
     Vector3 upgradeUIDefaultPosition;
-    Button showUpgradeButton;
     bool isUp = false;
     public float lerpTime;
 
     void Start()
     {
-        showUpgradeButton = upgradeUI.GetComponent<Button>();
         upgradeUIPosition = upgradeUI.GetComponent<RectTransform>();
         upgradeUIDefaultPosition = upgradeUIPosition.position;
+    }
+
+    public void UpdateStageText(int stage, int wave)
+    {
+        stageText.text = $"{stage}-{wave}";
     }
 
     public void ShowUpgardeUI()

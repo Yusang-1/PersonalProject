@@ -24,7 +24,8 @@ public class DungeonSelectUI : MonoBehaviour
 
     void GoToStage(int stageNum)
     {
-        Debug.Log(stageNum);
+        DungeonManager.Instance.SetDungeon(stageNum);
+        
         UIManager.Instance.StateMachine.SetState(UIState.dungeonUI);
     }
 }
