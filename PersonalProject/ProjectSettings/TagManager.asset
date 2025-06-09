@@ -3,7 +3,12 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - StageUI
+  - ExitButton
+  - BattlePoint
+  - NextStagePoint
+  - MakeMapPoint
   layers:
   - Default
   - TransparentFX
