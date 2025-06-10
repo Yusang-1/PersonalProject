@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 6550118221299261136}
   - component: {fileID: 5359435338021434141}
   - component: {fileID: 3528052554333817931}
+  - component: {fileID: -1523308065597489736}
   m_Layer: 0
   m_Name: Monster2
   m_TagString: Untagged
@@ -105,3 +106,18 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &-1523308065597489736
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8174695615881089783}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c807e7226a45dc847acc06c4f31c32f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  monsterSO: {fileID: 11400000, guid: 1950ac336e6c80442bbc1e564a2edaf0, type: 2}
+  dungeonSO: {fileID: 11400000, guid: 182bc5079bfbafa44a4815964142d398, type: 2}
+  dungeonUI: {fileID: 0}

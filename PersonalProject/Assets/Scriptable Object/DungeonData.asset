@@ -12,6 +12,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 598ef289e079e1f42b6130c34243a59b, type: 3}
   m_Name: DungeonData
   m_EditorClassIdentifier: 
-  bossTimeLimit: 0
-  stageWeighting: []
-  waveWeighting: []
+  bossTimeLimit: 60
+  stageWeighting:
+  - 1
+  - 1.5
+  - 2.2
+  - 4
+  - 8
+  waveWeighting:
+  - 1
+  - 1.1
+  - 1.2
+  - 1.3
+  - 3

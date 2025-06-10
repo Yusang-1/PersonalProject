@@ -118,3 +118,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c807e7226a45dc847acc06c4f31c32f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  monsterSO: {fileID: 11400000, guid: 1950ac336e6c80442bbc1e564a2edaf0, type: 2}
+  dungeonSO: {fileID: 11400000, guid: 182bc5079bfbafa44a4815964142d398, type: 2}
+  dungeonUI: {fileID: 0}

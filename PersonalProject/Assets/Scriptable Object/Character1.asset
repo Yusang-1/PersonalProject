@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <characterName>k__BackingField: Character1
   <characterClass>k__BackingField: 0
-  <attackSpeed>k__BackingField: 0.8
-  <attackPower>k__BackingField: 10
+  <attackSpeed>k__BackingField: 0.2
+  <attackPower>k__BackingField: 20
   <characterIevel>k__BackingField: 0
   <requiredMoney>k__BackingField: 00000000000000000000000000000000000000000000000000000000000000000000000000000000

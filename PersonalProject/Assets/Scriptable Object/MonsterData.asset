@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc438420925908e488ae67872610b9e1, type: 3}
   m_Name: MonsterData
   m_EditorClassIdentifier: 
-  monsterHP: 0
-  dropGold: 0
+  monsterHP: 100
+  dropGold: 20
