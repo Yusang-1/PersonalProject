@@ -11,7 +11,8 @@ GameObject:
   - component: {fileID: 696309238697828098}
   - component: {fileID: 872286463280279668}
   - component: {fileID: 8435605950487583556}
-  - component: {fileID: 6081465859714866770}
+  - component: {fileID: 4375277115759387219}
+  - component: {fileID: 8487028550620975562}
   m_Layer: 0
   m_Name: Character1
   m_TagString: Untagged
@@ -84,24 +85,28 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &6081465859714866770
-BoxCollider:
+--- !u!114 &4375277115759387219
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8608691722467118352}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e6c130f182cddd04c8bff9600387aed5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  characterSO: {fileID: 11400000, guid: 43a1477c77604734a899435f4fa0143d, type: 2}
+--- !u!114 &8487028550620975562
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8608691722467118352}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a11b8beece6294498f2a57cf7d6167b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

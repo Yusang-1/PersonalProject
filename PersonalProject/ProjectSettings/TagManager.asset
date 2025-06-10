@@ -7,7 +7,7 @@ TagManager:
   - StageUI
   - ExitButton
   - BattlePoint
-  - NextStagePoint
+  - NextWavePoint
   - MakeMapPoint
   layers:
   - Default
