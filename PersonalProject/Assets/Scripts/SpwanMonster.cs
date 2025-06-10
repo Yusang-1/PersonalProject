@@ -16,6 +16,6 @@ public class SpwanMonster : MonoBehaviour
         int monsterIndex = Random.Range(0, monsters.Count);
 
         GameObject go = Instantiate(monsters[monsterIndex], spawnPoint.position, spawnPoint.rotation, spawnPoint);
-        go.transform.localScale = new Vector3(1 / transform.localScale.x, 1, 1 / transform.localScale.z);
+        go.transform.localScale = new Vector3(1 / transform.localScale.x, 1, 1 / transform.localScale.z) * 3;
     }
 }
