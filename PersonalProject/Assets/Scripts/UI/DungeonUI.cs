@@ -1,19 +1,17 @@
 using System.Collections;
 using System.Collections.Generic;
-using System.ComponentModel;
 using TMPro;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class DungeonUI : MonoBehaviour
 {
+    [SerializeField] TextMeshProUGUI stageText;
+    [SerializeField] TextMeshProUGUI moneyText;
 
-
-    TextMeshProUGUI stageText;
-    TextMeshProUGUI moneyText;
-    float enemyHPRatio;
+    [SerializeField] Image monsterHPImage;
     List<Button> CharacterButtons;
+    [SerializeField] CharacterInventory inventory;
 
     IEnumerator enumerator;
     [SerializeField] GameObject upgradeUI;
@@ -26,11 +24,18 @@ public class DungeonUI : MonoBehaviour
     {
         upgradeUIPosition = upgradeUI.GetComponent<RectTransform>();
         upgradeUIDefaultPosition = upgradeUIPosition.position;
+        UpdateStageText();
+        UpdateMoneyText();
     }
 
-    public void UpdateStageText(int stage, int wave)
+    public void UpdateStageText()
     {
-        stageText.text = $"{stage}-{wave}";
+        stageText.text = DungeonManager.Instance.SetStageText();
+    }
+
+    public void UpdateMoneyText()
+    {
+        moneyText.text = inventory.gold.ToString();
     }
 
     public void ShowUpgardeUI()
@@ -55,16 +60,21 @@ public class DungeonUI : MonoBehaviour
     {
         float elaspedTime = 0;
 
-        while(elaspedTime < time)
+        while (elaspedTime < time)
         {
             elaspedTime += Time.deltaTime;
 
-            upgradeUIPosition.position = Vector3.Lerp(current, target, elaspedTime/time);
+            upgradeUIPosition.position = Vector3.Lerp(current, target, elaspedTime / time);
 
             yield return null;
         }
         upgradeUIPosition.position = target;
 
         yield return null;
+    }
+
+    public void UpdateHPRatio(float ratio)
+    {
+        monsterHPImage.rectTransform.localScale = new Vector3(ratio, 1, 1);
     }
 }
