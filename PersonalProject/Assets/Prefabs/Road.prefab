@@ -60,14 +60,14 @@ Transform:
   m_GameObject: {fileID: 758517092187047433}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -3.3, z: 45.6}
+  m_LocalPosition: {x: 0, y: -2, z: 45}
   m_LocalScale: {x: 4.15, y: 1, z: 100}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1950931501118894627}
+  - {fileID: 6705756654697035506}
   - {fileID: 225756072687096002}
   - {fileID: 3196590603252849480}
-  - {fileID: 6705756654697035506}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &5221377357829027651
@@ -170,7 +170,7 @@ GameObject:
   - component: {fileID: 3196590603252849480}
   - component: {fileID: 5226223490413910348}
   m_Layer: 0
-  m_Name: NextStage Point
+  m_Name: NextWave Point
   m_TagString: NextStagePoint
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -185,7 +185,7 @@ Transform:
   m_GameObject: {fileID: 3601707492336989148}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 2.9, z: 0.357}
+  m_LocalPosition: {x: 0, y: 2.9, z: 0.601}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -238,7 +238,7 @@ Transform:
   m_GameObject: {fileID: 4831261841915966435}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 2.9, z: 0.191}
+  m_LocalPosition: {x: 0, y: 2.9, z: 0.342}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
