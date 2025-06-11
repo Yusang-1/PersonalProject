@@ -14,6 +14,11 @@
 
 ---
 
+### 시연 영상
+![Image](https://github.com/user-attachments/assets/1ec7616e-d63d-4a55-a3d5-e9fa3bc21b67)
+
+---
+
 ### 구현한 기능
 1. 기본 UI 구현
     - 게임 화면에 HP, 현재 스테이지, 골드 정보를 표시했습니다.
