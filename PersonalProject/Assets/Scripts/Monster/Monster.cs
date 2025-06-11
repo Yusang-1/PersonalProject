@@ -1,6 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class Monster : MonoBehaviour
 {
@@ -23,7 +21,7 @@ public class Monster : MonoBehaviour
         inventory = FindAnyObjectByType<CharacterInventory>();
     }
 
-    float carculateWeighting(float defaultHP, float stageWeightingValue, float waveWeightingValue)
+    float carculateWeighting(float defaultHP, float stageWeightingValue, float waveWeightingValue) //DungeonSO에서 지정한 가중치를 이용해 몬스터의 체력을 결정
     {
         float bossWeighting = DungeonManager.Instance.isMakeBossWave ? 2.5f : 1;
         float resultHP;

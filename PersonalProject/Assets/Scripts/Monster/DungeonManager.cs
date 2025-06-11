@@ -1,8 +1,4 @@
-﻿using Palmmedia.ReportGenerator.Core.Parser.Analysis;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEditor.SceneManagement;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class DungeonManager : MonoBehaviour
 {
@@ -34,7 +30,7 @@ public class DungeonManager : MonoBehaviour
         }
     }
     #endregion
-    [SerializeField] GameObject block;
+    [SerializeField] GameObject block; //스테이지 속 한 웨이브의 단위
     [SerializeField] public Transform mapContainer;
     [SerializeField] CharacterBattle characterBattle;
 
@@ -48,7 +44,7 @@ public class DungeonManager : MonoBehaviour
     public int currentWave = 0;
 
     [SerializeField] float mapMoveSpeed;
-    [SerializeField] DungeonUI dungeonUI;
+    [SerializeField] public DungeonUI dungeonUI;
     private void Start()
     {
         defaultBlcokPosition = new Vector3(0, -2, 45);
@@ -59,7 +55,7 @@ public class DungeonManager : MonoBehaviour
         MovingDungeon();
     }
 
-    public void SetDungeon(int stageNum)
+    public void SetDungeon(int stageNum) //던전 입장시 작동
     {
         isInDungeon = true;
         currentStage = stageNum;
@@ -73,7 +69,7 @@ public class DungeonManager : MonoBehaviour
         lastBlockPosition = go.transform.localPosition;
     }
 
-    public void SetDungeon()
+    public void SetDungeon() //플레이어가 MakeMapPoint에 OnTriggerEnter 되면 실행
     {
         if (currentWave == 3) isMakeBossWave = true;
         if (currentWave == 4)

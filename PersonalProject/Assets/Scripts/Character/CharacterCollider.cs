@@ -21,9 +21,8 @@ public class CharacterCollider : MonoBehaviour
         {
             Debug.Log("NextWavePoint");
             DungeonManager.Instance.currentWave++;
-            dungeonUI.UpdateStageText();
+            DungeonManager.Instance.dungeonUI.UpdateStageText();
             DungeonManager.Instance.DestroyBlock();
-
         }
         else if(other.gameObject.tag == "MakeMapPoint")
         {
